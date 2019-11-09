@@ -110,4 +110,9 @@ li, img {
     max-width: 900px;
 }
 
+a:hover{
+    color: rgb(4, 4, 212);
+    transition: 0.3s ease;
+}
+
 
