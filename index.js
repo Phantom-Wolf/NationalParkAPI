@@ -26,7 +26,7 @@ function displayResults(responseJson){
             <p><span>States:</span> ${responseJson.data[i].states}</p>
             <p><span>Description:</span> ${responseJson.data[i].description}</p>
             <p><span>Website:</span> <a href="${responseJson.data[i].url}" target="_blank">${responseJson.data[i].url}</a></p>
-            <p><span>Address:</span> ${responseJson.data[i].directionsInfo}, for further information: <a href="${responseJson.data[i].directionsUrl}" target="_blank">here.</a></p>
+            <p><span>Address:</span> ${responseJson.data[i].directionsInfo}, for further information: <a href="${responseJson.data[i].directionsUrl}" target="_blank">Click here.</a></p>
             </li>
         `)}
     }
