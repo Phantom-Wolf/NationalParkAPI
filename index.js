@@ -47,7 +47,6 @@ function getParksList(query, maxResults){
     const url = searchURL + '?' + queryString;
 
     console.log(url)
-
     fetch(url)
         .then(response => {
             if(response.ok){
@@ -62,6 +61,24 @@ function getParksList(query, maxResults){
 
 }
 
+$(function renderStateList(){
+    let dropDownItems = ``;
+    STORE.forEach(state => {
+        dropDownItems+=`<option value="${state.abbreviation}">${state.name}</option>`;
+    });
+    $('#state-dropdown-select').append(dropDownItems);
+})
+
+function validateState(){
+    const searchItem = $('#parks').val();
+    const maxResults = $('#max-results').val();
+    let placeArray = searchItem.split(",");
+    placeArray.forEach(place =>{
+        console.log(place)
+        if (STORE.includes(place))
+        console.log()
+    })
+}
 
 function watchForm() {
 
@@ -71,9 +88,11 @@ function watchForm() {
       $('.err-js').empty();
       $("#results").hide();
       $('.sorry').remove();
-      const query = $('#parks').val();
-      const maxResults = $('#max-results').val();
-      getParksList(query, maxResults);
+      validateState();
+    //   const promise = placeArray.map(place => {
+    //     return getParksList(place, maxResults);
+    //     })
+      
     });
 }
   

@@ -14,10 +14,11 @@
 
    <main>
         <form>
-            <label for="parks">Enter State name here:</label>
+            <label for="parks">Enter State name(s) here:</label>
             <input type="text" name="parks" id="parks" required>
+            <select name="parks" id="state-dropdown-select"></select>
 
-            <label for="max-results">Maximum results to return:</label>
+            <label for="max-results">Maximum results per state:</label>
             <input type="number" name="max-results" id="max-results" value="10">
         
             <input type="submit" class="submit" value="Let's Go!">
@@ -38,5 +39,6 @@
    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
    crossorigin="anonymous"></script>
    <script src="index.js"></script>
+   <script src="store.js"></script>
 </body>
 </html>

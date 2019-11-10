@@ -46,6 +46,10 @@ form{
     border: none;
 }
 
+state-dropdown-select{
+    width: 30px;
+}
+
 #parks,
 #max-results{
     border-radius: 4px;
