@@ -61,18 +61,13 @@ function getParksList(query, maxResults){
 
 }
 
-$(function renderStateList(){
-    let dropDownItems = ``;
-    STORE.forEach(state => {
-        dropDownItems+=`<option value="${state.abbreviation}">${state.name}</option>`;
-    });
-    $('#state-dropdown-select').append(dropDownItems);
-})
+
 
 function validateState(){
-    const searchItem = $('#parks').val();
+    const searchItem = $('#parks').val().toUpperCase();
     const maxResults = $('#max-results').val();
     let placeArray = searchItem.split(",");
+    console.log(searchItem)
     placeArray.forEach(place =>{
         console.log(place)
         if (STORE.includes(place))
