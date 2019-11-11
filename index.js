@@ -70,10 +70,13 @@ function validateState(){
     const abbreviations = placeArray.map(place =>{
         const state = STORE.find(({name}) => name.toLowerCase().trim() === place.toLowerCase().trim());
         console.log(state)
-
+        const abb = STORE.find(({abbreviation}) => abbreviation.toLowerCase().trim() === place.toLowerCase().trim());
         if (state) {
           return state.abbreviation;
+        } else if (abb){
+            return abb.abbreviation;
         }
+
     })
     console.log(abbreviations)
     const finalResult = abbreviations.join(',')
